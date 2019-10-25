@@ -1,0 +1,51 @@
+* {
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Open Sans;
+  font-size: 20px;
+  color: #3A3A3C;
+  text-align: center;
+  line-height: 1.5;
+}
+
+nav,
+footer {
+  padding: 1% 0;
+  background-color: #2C2C2E;
+  color: #FFFFFF;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+header, section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  //-webkit-box-pack: center;
+  justify-content: center;
+  //-webkit-box-align: center;
+  //align-items: flex-start;
+}
+
+header {
+  background-color: #3A3A3C;
+  color: #FFFFFF;
+}
+
+section {
+  background-color: #bbb;
+  color: #000000;;
+}
+
+section:nth-child(even) {
+  background-color: #ddd;
+}
