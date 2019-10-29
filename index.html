@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <nav role="navigation">
+  <nav role="navigation" class="col">
     <div class="hamburger">&#9776;</div>
     <div class="nav-links">
-      <div class="page-link">Home</div>
+      <div class="page-link active">Home</div>
       <div class="page-link">About me</div>
       <div class="page-link">Portfolio</div>
       <div class="page-link">Resume</div>
@@ -19,8 +19,8 @@
     </div>
   </nav>
   <main role="main">
-    <header role="banner">
-      <div class="content">
+    <header role="heading" class="col">
+      <div class="header-content">
         <h3 class="intro">Hello, my name is </span>
         <h1 class="title">Esther Lin.</h1>
         <h2 class="subtitle">I love coding and building software.</h2>
@@ -29,31 +29,31 @@
         <i class="fas fa-arrow-down"></i>
       </div>
     </header>
-    <section>
-      <div class="content">
-        <h4 class="page-title">About me</h4>
-        <div class="about-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas facilisis enim vel ipsum lobortis facilisis. Nullam a bibendum purus. Pellentesque maximus vel mi vel hendrerit. Praesent euismod lectus quis rutrum aliquet. Proin dignissim lectus ut mollis rutrum. Mauris ac finibus odio, quis luctus justo. Mauris lobortis augue magna, sit amet condimentum nisi porttitor eget. Aliquam aliquet mauris enim, fermentum fringilla turpis condimentum id. Integer ut imperdiet nibh. Maecenas ut rutrum nisl. Maecenas volutpat metus sit amet rhoncus rutrum. In at elit eu mauris lobortis hendrerit.</p>
-          <p>Mauris vestibulum quam in porttitor elementum. Aliquam eros arcu, tempor vitae purus sed, fermentum tristique nibh. Quisque efficitur orci eros, nec interdum enim porttitor et. Maecenas ultricies placerat nisl vitae semper. Fusce a metus lobortis, molestie arcu ut, sodales urna. Nunc ligula leo, fringilla eu lorem eget, euismod blandit dolor. Integer molestie elementum commodo.</p>
+    <section class="section-content col">
+      <h4 class="page-title">About me</h4>
+      <div class="about-content">
+        <div class="about-desc">
+          <p>After working closely with software developers for 4 years as a system analyst, I decided to become one myself as I found software engineering to be where my passion lies in, and what I always know I’ll be really good at.</p>
+          <p>Current I am a computer science student at Oregon State University expecting to graduate in Dec. 2020. I also joined the web developer track bootcamp at Bloc to be well prepared for a software engineer position. I’m a quick learner and problem solver with good logical thinking and troubleshooting skills.</p>
+          <p>While I’m not coding, I love reading, good food, quality time with friends and family, and outdoors.</p>
         </div>
+         <img src="images/me.jpg" alt="a picture of Esther smaling" class="about-img">
       </div>
     </section>
 
-    <section>
-        <div class="content">
-            <h4 class="page-title">Portfolio</h4>
-            <div class="portfolio-content">
-              <img src="/Users/CoraLin/Documents/Bloc Projects/Portfolio/portfolio/images/quiz-app.png" alt="screenshot of project">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet commodo tellus, in interdum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam non libero bibendum, vestibulum ipsum ut, fringilla urna. Ut iaculis placerat dolor, eu varius eros efficitur ac. Nunc luctus diam.</p>
-              <div class="project-links">
-                <span class="project-link">live</span>
-                <span class="project-link">repo</span>
-              </div>
-            </div>
-          </div>
+    <section class="section-content col">
+      <h4 class="page-title">Portfolio</h4>
+      <div class="portfolio-content">
+        <img src="images/quiz-app.png" alt="screenshot of project">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet commodo tellus, in interdum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam non libero bibendum, vestibulum ipsum ut, fringilla urna. Ut iaculis placerat dolor, eu varius eros efficitur ac. Nunc luctus diam.</p>
+        <div class="row">
+          <span class="project-link">live</span>
+          <span class="project-link">repo</span>
+        </div>
+      </div>
     </section>
   </main>
-  <footer role="content-info"></footer>
+  <footer role="contentinfo" class="col"></footer>
   <script src="https://kit.fontawesome.com/ece26f3653.js" crossorigin="anonymous"></script>
 </body>
 </html>
