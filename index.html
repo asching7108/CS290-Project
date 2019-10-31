@@ -9,51 +9,92 @@
 </head>
 <body>
   <nav role="navigation" class="col">
-    <div class="hamburger">&#9776;</div>
-    <div class="nav-links">
-      <div class="page-link active">Home</div>
-      <div class="page-link">About me</div>
-      <div class="page-link">Portfolio</div>
-      <div class="page-link">Resume</div>
-      <div class="page-link">Contact</div>
+    <div class="hamburger link">&#9776;</div>
+    <div class="nav-links invisible">
+      <span class="page-link link  active" dest="home">Home</span>
+      <span class="page-link link" dest="about">About</span>
+      <span class="page-link link" dest="portfolio">Portfolio</span>
+      <span class="page-link link" dest="contact">Contact</span>
     </div>
   </nav>
+  <div class="sidebar col">
+    <a href="https://github.com/asching7108/"><i class="fab fa-github fa-s link"></i></a>
+    <a href="https://www.linkedin.com/in/hsing-yi-lin-95611b61/"><i class="fab fa-linkedin fa-s link"></i></a>
+  </div>
   <main role="main">
-    <header role="heading" class="col">
+    <header id="home" role="heading" class="col">
       <div class="header-content">
         <h3 class="intro">Hello, my name is </span>
         <h1 class="title">Esther Lin.</h1>
         <h2 class="subtitle">I love coding and building software.</h2>
       </div>
-      <div class="section-arrow-down">
+      <div class="arrow-down-link link" dest="about">
         <i class="fas fa-arrow-down"></i>
       </div>
     </header>
-    <section class="section-content col">
+    <section id="about" class="section-content col">
       <h4 class="page-title">About me</h4>
       <div class="about-content">
-        <div class="about-desc">
-          <p>After working closely with software developers for 4 years as a system analyst, I decided to become one myself as I found software engineering to be where my passion lies in, and what I always know I’ll be really good at.</p>
+        <div class="about-left">
+          <p>After working closely with software developers for 4 years as a system analyst, I decided to become one myself as I found software engineering to be where my passion lies in, and what I always knew I’ll be really good at.</p>
           <p>Current I am a computer science student at Oregon State University expecting to graduate in Dec. 2020. I also joined the web developer track bootcamp at Bloc to be well prepared for a software engineer position. I’m a quick learner and problem solver with good logical thinking and troubleshooting skills.</p>
-          <p>While I’m not coding, I love reading, good food, quality time with friends and family, and outdoors.</p>
+          <h5 class="block-title">Technical Skills</h5>
+          <div class="row">
+            <ul class="tech-skills col">
+              <li class="skill">JavaScript(ES6+)</li>
+              <li class="skill">Node.js</li>
+              <li class="skill">React</li>
+              <li class="skill">PostgreSQL</li>
+            </ul>
+            <ul class="tech-skills col">
+              <li class="skill">HTML</li>
+              <li class="skill">CSS</li>
+              <li class="skill">Java</li>
+              <li class="skill">C++</li>
+            </ul>
+          </div>
         </div>
-         <img src="images/me.jpg" alt="a picture of Esther smaling" class="about-img">
+        <div class="about-right col">
+          <img src="images/me.jpg" alt="a picture of Esther smaling" class="about-img">
+          <p>While I’m not coding, I love reading, good food, new adventures, and outdoors.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section-content col">
+    <section id="portfolio" class="section-content col">
       <h4 class="page-title">Portfolio</h4>
       <div class="portfolio-content">
-        <img src="images/quiz-app.png" alt="screenshot of project">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet commodo tellus, in interdum velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam non libero bibendum, vestibulum ipsum ut, fringilla urna. Ut iaculis placerat dolor, eu varius eros efficitur ac. Nunc luctus diam.</p>
-        <div class="row">
-          <span class="project-link">live</span>
-          <span class="project-link">repo</span>
+        <div class="project-link-block row">
+          <a class="project-link link" href="https://asching7108.github.io/quiz-app/">live</a>
+          <a class="project-link link" href="https://github.com/asching7108/quiz-app/">repo</a>
+        </div>
+        <img src="images/quiz-app.png" alt="screenshot of project" class="project-img">
+        <p class="project-desc">This is a quiz app consisting of 10 web developer questions. The app shows the current progress and score during the quiz, and allows user to retake the quiz after displaying the result.</p>
+        <div class="project-tech-block row">
+          <span class="project-tech">HTML</span>
+          <span class="project-tech">CSS</span>
+          <span class="project-tech">JavaScript</span>
+          <span class="project-tech">Responsive Design</span>
         </div>
       </div>
     </section>
+    <section id="contact" class="section-content bottom-section col">
+      <h4 class="page-title">Get In Touch</h4>
+      <div class="contact-content col">
+        <p>Currently I am seeking internship and apprenticeship opportunities in software development. I am looking forward to hearing from you and I will get back to you soon!</p>
+        <a class="contact-link link" href="mailto:asching7108@gmail.com">Say Hi</a>
+      </div>
+    </section>
   </main>
-  <footer role="contentinfo" class="col"></footer>
+  <footer role="contentinfo" class="col">
+    <div class="footer-links row">
+      <a href="https://github.com/asching7108/"><i class="fab fa-github fa-f link"></i></a>
+      <a href="https://www.linkedin.com/in/hsing-yi-lin-95611b61/"><i class="fab fa-linkedin fa-f link"></i></a>      
+    </div>
+    <p>Esther Lin ©2019</p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/ece26f3653.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
 </html>
