@@ -303,6 +303,21 @@ footer p {
   color: #FF6482;
 }
 
+.arrow-down-link:hover .fas:before {
+  background-color: #9AAFD9;
+  color: #FFFFFF;
+}
+
+.fa-s:hover .fab:before,
+.fa-f:hover .fab:before {
+  color: #FF6482;
+}
+
+.contact-link:hover {
+  background-color: #FF375F;
+  color: #FFFFFF;
+}
+
 @media screen and (min-width: 600px) {
   .hamburger {
     display: none;
@@ -335,12 +350,10 @@ footer p {
 
 @media screen and (min-width: 200px) and (min-height: 360px) {
   .arrow-down-link {
-    width: 100%;
+    align-self: center;
     position: absolute;
     bottom: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: inherit;
   }
 }
 
