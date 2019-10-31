@@ -7,23 +7,23 @@ function eventHandler() {
 
   $('.page-link, .arrow-down-link').click(function() {
     let anchor = $(this).attr('dest');
-    highlightLink(anchor);
     $('.nav-links').addClass('invisible');
     $('html, body').animate({scrollTop: $(`#${anchor}`).offset().top -50}, 400);
   });
 
   $(window).on('scroll', function () {
-    let pos = $(window).scrollTop() + 51;
-    if (pos === $('#home').offset().top) {
+    let pos = $(window).scrollTop();
+    console.log(pos);
+    if (pos + 51 > $('#home').offset().top) {
       highlightLink('home');
     }
-    if (pos === $('#about').offset().top) {
+    if (pos + 51 > $('#about').offset().top) {
       highlightLink('about');
     }
-    if (pos === $('#portfolio').offset().top) {
+    if (pos + 51 > $('#portfolio').offset().top) {
       highlightLink('portfolio');
     }
-    if (pos === $('#contact').offset().top ||
+    if (pos + 51 > $('#contact').offset().top ||
         pos + $(window).height() === $(document).height()) {
       highlightLink('contact');
     }

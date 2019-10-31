@@ -299,6 +299,10 @@ footer p {
   cursor: pointer;
 }
 
+.page-link:hover {
+  color: #FF6482;
+}
+
 @media screen and (min-width: 600px) {
   .hamburger {
     display: none;
