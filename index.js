@@ -13,7 +13,6 @@ function eventHandler() {
 
   $(window).on('scroll', function () {
     let pos = $(window).scrollTop();
-    console.log(pos);
     if (pos + 51 > $('#home').offset().top) {
       highlightLink('home');
     }
