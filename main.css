@@ -1,5 +1,8 @@
-body {
+* {
   box-sizing: border-box;
+}
+
+body {
   margin: 0;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", sans-serif;
   font-weight: normal;
@@ -28,8 +31,15 @@ body {
 nav,
 footer, 
 header {
-  background-color: #252A34;
+  background-color: #1C1C1E;
   color: #FFFFFF;
+}
+
+.link {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 nav {
@@ -90,6 +100,15 @@ nav {
   margin: 0 auto;
 }
 
+.side-link .fa:before,
+.footer-link .fa:before {
+  font-size: 1.5em;
+}
+
+.side-link {
+  margin-bottom: 20px;
+}
+
 header, 
 section {
   min-height: 100vh;
@@ -97,8 +116,9 @@ section {
 
 .header-container {
   align-self: stretch;
-  margin: 0 8%;
+  margin: 0 8% 4%;
 }
+
 .header-content {
   margin: 0 8%;
   width: 80vw;
@@ -151,30 +171,26 @@ ul {
 
 .arrow-down-link {
   display: none;
+  margin-bottom: 2%;
 }
 
-.fas:before, 
-.fab:before {
+.fa:before {
   display: inline-block;
   color: #9AAFD9;
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.fas:before {
+.fa-arrow-down:before {
   content: "\f063";
   border: 1px solid #9AAFD9;
   border-radius: 50%;
   padding: 1em;
-}
-
-.fab:before {
-  font-size: 1.5em;
-}
-
-.fa-s {
-  margin-bottom: 20px;
 }
 
 .fa-github:before {
@@ -183,6 +199,10 @@ ul {
 
 .fa-linkedin:before {
   content: "\f0e1";
+}
+
+.fa-external-link-alt:before {
+  content: "\f35d";
 }
 
 .about-content {
@@ -268,35 +288,66 @@ ul {
 .portfolio-content {
   width: calc(80vw - 40px);
   max-width: 1000px;
+  margin-bottom: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.project-link {
-  color: #FF375F;
-  margin: 0 10px 20px;
+.project-info div {
+  margin: 5px 0;
 }
 
 .project-img {
   width: 100%;
+  max-width: 560px;
+  border: 1px solid #9AAFD9;
+  padding: 8px;
+  position: relative;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.project-info {
+  width: 90%;
+  max-width: 500px;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+}
+
+.project-link,
+.project-tech {
+  margin: 0 10px 0 10px;
+}
+  
+.project-link .fa:before {
+  font-size: 1.2em;
+}
+
+.project-name h5 {
+  font-weight: bold;
+  margin: 0;
 }
 
 .project-desc {
   line-height: 1.5;
+  background-color: #DBE2F2;
+  text-align: left;
+  padding: 20px;
 }
 
-.project-tech-block {
-  text-align: center;
+.project-desc em {
+  color: #FF375F;
+  font-size: 0.9em;
 }
- 
+
 .project-tech {
   font-size: 0.85em;
   display: inline-block;
-  background-color: #D8D8DC;
-  text-align: center;
-  vertical-align: middle;
-  margin: 4px 2px;
-  padding: 6px 8px 6px;
-  border-radius: 5%;
-  line-height: normal;
+  line-height: 1.5;
+  color: #FF375F;
 }
 
 .bottom-section {
@@ -323,13 +374,14 @@ footer {
   text-align: center;
 }
 
-.fa-f {
+.footer-link {
   margin: 0 10px;
 }
 
 footer p {
   margin: 15px 0 0;
 }
+
 .link:hover {
   cursor: pointer;
 }
@@ -338,14 +390,16 @@ footer p {
   color: #FF6482;
 }
 
-.arrow-down-link:hover .fas:before {
+.arrow-down-link:hover .fa:before {
   background-color: #9AAFD9;
   color: #FFFFFF;
 }
 
-.fa-s:hover .fab:before,
-.fa-f:hover .fab:before {
+.side-link:hover .fa:before,
+.footer-link:hover .fa:before,
+.project-link:hover .fa:before {
   color: #FF6482;
+  transform: translateY(-2px);
 }
 
 .contact-link:hover {
@@ -353,12 +407,30 @@ footer p {
   color: #FFFFFF;
 }
 
+@media screen and (min-width: 200px) and (min-height: 360px) {
+  .arrow-down-link {
+    align-self: center;
+    position: absolute;
+    bottom: 16px;
+    display: inherit;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .tech-block {
+    flex-direction: row;
+  }
+  .tech-skills {
+    width: 50%;
+  }
+}
+
 @media screen and (min-width: 600px) {
   .hamburger {
     display: none;
   }
   .nav-links {
-    background-color: #252A34;
+    background-color: #1C1C1E;
     position: static;
     height: auto;
     display: flex;
@@ -377,23 +449,44 @@ footer p {
   footer p {
     margin: 0;
   }
-}
-
-@media screen and (min-width: 200px) and (min-height: 360px) {
-  .arrow-down-link {
-    align-self: center;
-    position: absolute;
-    bottom: 16px;
-    display: inherit;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .tech-block {
+  .portfolio-content {
     flex-direction: row;
   }
-  .tech-skills {
+  .project-info {
+    margin: 0;
+  }
+  .project-info div {
+    margin: 10px 0;
+  }
+  .project-img {
+    width: 56%;
+    margin: 0 -6% 0 0;
+  }
+  .project-info {
     width: 50%;
+    align-items: flex-end;
+  }  
+  .project-link,
+  .project-tech {
+    margin: 0 0 0 20px;
+  }
+  .portfolio-content:nth-child(odd) .project-img {
+    left: 50%;
+    margin: 0 0 0 -6%;
+  }
+  .portfolio-content:nth-child(odd) .project-info {
+    left: -50%;
+    align-items: flex-start;
+  }
+  .portfolio-content:nth-child(odd) .project-link,
+  .portfolio-content:nth-child(odd) .project-tech {
+    margin: 0 20px 0 0;
+  }
+  .portfolio-content:nth-child(even) .project-desc {
+    text-align: right;
+  }
+  .portfolio-content:nth-child(even) .project-tech-block {
+    text-align: right;
   }
 }
 
@@ -448,10 +541,13 @@ footer p {
   .fa-arrow-down:before {
     font-size: 0.75em;
   }
-  .block-title {
+  .block-title, .project-name h5 {
     font-size: 1em;
   }
-  .skill {
+  .project-desc {
+    font-size: 0.9em;
+  }
+  .skill, .project-tech {
     font-size: 0.8em;
   }
 }

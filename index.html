@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Esther Lin | Software Engineer</title>
+  <link rel="icon" href="images/32x32.png">
+  <link rel="apple-touch-icon" href="images/180x180.png">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -18,8 +20,8 @@
     </div>
   </nav>
   <div class="sidebar col">
-    <a class="fa-s" href="https://github.com/asching7108/"><i class="fab fa-github link"></i></a>
-    <a class="fa-s" href="https://www.linkedin.com/in/hsing-yi-lin-95611b61/"><i class="fab fa-linkedin link"></i></a>
+    <a class="side-link" href="https://github.com/asching7108/" target="_blank"><i class="fa fab fa-github link"></i></a>
+    <a class="side-link" href="https://www.linkedin.com/in/hsing-yi-lin-95611b61/" target="_blank"><i class="fa fab fa-linkedin link"></i></a>
   </div>
   <main role="main">
     <header id="home" role="heading" class="col">
@@ -30,7 +32,7 @@
         <h2 class="subtitle">I love coding and building software.</h2>
       </div>
       <div class="arrow-down-link link" dest="about">
-        <i class="fas fa-arrow-down"></i>
+        <i class="fa fas fa-arrow-down"></i>
       </div>
     </div>
     </header>
@@ -65,18 +67,54 @@
 
     <section id="portfolio" class="section-content col">
       <h4 class="page-title">Portfolio</h4>
-      <div class="portfolio-content">
-        <div class="project-link-block row">
-          <a class="project-link link" href="https://asching7108.github.io/quiz-app/">live</a>
-          <a class="project-link link" href="https://github.com/asching7108/quiz-app/">repo</a>
+      <div class="portfolio-content row">
+        <img class="project-img" src="images/AndIQuote.png" alt="screenshot of project">
+        <div class="project-info col">
+          <div class="project-link-block row">
+            <a class="project-link link" href="https://github.com/asching7108/AndIQuote/" target="_blank"><i class="fa fab fa-github link"></i></a>
+            <a class="project-link link" href="https://asching7108.github.io/AndIQuote/" target="_blank"><i class="fa fas fa-external-link-alt link"></i></a>
+          </div>
+          <div class="project-name"><h5>AndIQuote</h5></div>
+          <div class="project-desc">A quote searching application. Users can search for quotes or get quote of the day, and make a good-for-sharing image with awesome photos.</div>
+          <div class="project-tech-block">
+            <span class="project-tech">JavaScript</span>
+            <span class="project-tech">jQuery</span>
+            <span class="project-tech">Unsplash API</span>
+            <span class="project-tech">FavQs API</span>
+          </div>
         </div>
-        <img src="images/quiz-app.png" alt="screenshot of project" class="project-img">
-        <p class="project-desc">This is a quiz app consisting of 10 web developer questions. The app shows the current progress and score during the quiz, and allows user to retake the quiz after displaying the result.</p>
-        <div class="project-tech-block">
-          <span class="project-tech">HTML</span>
-          <span class="project-tech">CSS</span>
-          <span class="project-tech">JavaScript</span>
-          <span class="project-tech">Responsive Design</span>
+      </div>
+      <div class="portfolio-content row">
+        <img class="project-img" src="images/bearmaps.png" alt="screenshot of project">
+        <div class="project-info col">
+          <div class="project-link-block row">
+            <a class="project-link link" href="https://github.com/asching7108/cs61b-sp19/" target="_blank"><i class="fa fab fa-github link"></i></a>
+            <a class="project-link link" href="http://bearmaps-cs61b-sp19-el.herokuapp.com/" target="_blank"><i class="fa fas fa-external-link-alt link"></i></a>
+          </div>
+          <div class="project-name"><h5>Bear Maps</h5></div>
+          <div class="project-desc">A map similar to google map that does map rastering, routing (finding the shortest path), autocomplete and written directions.<em> * Implemented all the back-end algorithms with the front-end code provided.</em></div>
+          <div class="project-tech-block">
+            <span class="project-tech">Java</span>
+            <span class="project-tech">K-D Tree</span>
+            <span class="project-tech">A*</span>
+            <span class="project-tech">Trie</span>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-content">
+        <img class="project-img" src="images/quiz-app.png" alt="screenshot of project">
+        <div class="project-info col">
+          <div class="project-link-block row">
+            <a class="project-link link" href="https://github.com/asching7108/quiz-app/" target="_blank"><i class="fa fab fa-github link"></i></a>
+            <a class="project-link link" href="https://asching7108.github.io/quiz-app/" target="_blank"><i class="fa fas fa-external-link-alt link"></i></a>
+          </div>
+          <div class="project-name"><h5>Web Developer Quiz</h5></div>
+          <div class="project-desc">A quiz app consisting of web developer questions. This is my very first attempt to try out front-end fundamentals.</div>
+          <div class="project-tech-block">
+            <span class="project-tech">HTML</span>
+            <span class="project-tech">CSS</span>
+            <span class="project-tech">JavaScript</span>
+          </div>
         </div>
       </div>
     </section>
@@ -90,8 +128,8 @@
   </main>
   <footer role="contentinfo" class="col">
     <div class="footer-links row">
-      <a class="fa-f" href="https://github.com/asching7108/"><i class="fab fa-github link"></i></a>
-      <a class="fa-f" href="https://www.linkedin.com/in/hsing-yi-lin-95611b61/"><i class="fab fa-linkedin link"></i></a>      
+      <a class="footer-link" href="https://github.com/asching7108/" target="_blank"><i class="fa fab fa-github link"></i></a>
+      <a class="footer-link" href="https://www.linkedin.com/in/hsing-yi-lin-95611b61/" target="_blank"><i class="fa fab fa-linkedin link"></i></a>      
     </div>
     <p>Esther Lin ©2019</p>
   </footer>
