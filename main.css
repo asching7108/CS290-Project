@@ -372,10 +372,11 @@ ul {
 footer {
   height: 100px;
   text-align: center;
+  font-size: 0.9em;
 }
 
 .footer-link {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 footer p {
