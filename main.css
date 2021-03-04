@@ -36,6 +36,7 @@ header {
 }
 
 .link {
+  text-decoration: none;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -80,33 +81,11 @@ nav {
 .page-link {
   display: inline-block;
   margin: 0 1.25vw;
+  color: #FFFFFF;
 }
 
 .active {
   color: #FF375F;
-}
-
-.sidebar {
-  display: none;
-}
-
-.sidebar:after {
-  content: "";
-  display: inline-block;
-  width: 1px;
-  height: 100px;
-  position: relative;
-  background-color: #9AAFD9;
-  margin: 0 auto;
-}
-
-.side-link .fa:before,
-.footer-link .fa:before {
-  font-size: 1.5em;
-}
-
-.side-link {
-  margin-bottom: 20px;
 }
 
 header, 
@@ -170,11 +149,6 @@ ul {
   list-style: none;
 }
 
-.arrow-down-link {
-  display: none;
-  margin-bottom: 2%;
-}
-
 .fa:before {
   display: inline-block;
   color: #9AAFD9;
@@ -185,21 +159,6 @@ ul {
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-.fa-arrow-down:before {
-  content: "\f063";
-  border: 1px solid #9AAFD9;
-  border-radius: 50%;
-  padding: 1em;
-}
-
-.fa-github:before {
-  content: "\f09b";
-}
-
-.fa-linkedin:before {
-  content: "\f0e1";
 }
 
 .fa-external-link-alt:before {
@@ -296,10 +255,6 @@ ul {
   align-items: center;
 }
 
-.project-info div {
-  margin: 5px 0;
-}
-
 .project-img {
   width: 100%;
   max-width: 560px;
@@ -316,6 +271,10 @@ ul {
   align-items: center;
   position: relative;
   margin-top: 10px;
+}
+
+.project-info div {
+  margin: 5px 0;
 }
 
 .project-link,
@@ -364,6 +323,7 @@ ul {
 .contact-link {
   border: 1px solid #D9002B;
   border-radius: 5px;
+  background-color: #FFFFFF;
   color: #D9002B;
   text-decoration: none;
   margin-top: 20px;
@@ -392,13 +352,6 @@ footer p {
   color: #FF375F;
 }
 
-.arrow-down-link:hover .fa:before {
-  background-color: #9AAFD9;
-  color: #FFFFFF;
-}
-
-.side-link:hover .fa:before,
-.footer-link:hover .fa:before,
 .project-link:hover .fa:before {
   color: #FF375F;
   transform: translateY(-2px);
@@ -409,13 +362,25 @@ footer p {
   color: #FFFFFF;
 }
 
-@media screen and (min-width: 200px) and (min-height: 360px) {
-  .arrow-down-link {
-    align-self: center;
-    position: absolute;
-    bottom: 16px;
-    display: inherit;
-  }
+.name-input {
+  width: 100px;
+  margin-bottom: 20px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+}
+
+.scroll-box-outer {
+  height: 120px;
+  width: 300px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.scroll-box-inner {
+  width: 100%;
+  height: 200px;
+  border: none;
 }
 
 @media screen and (min-width: 320px) {
@@ -438,18 +403,6 @@ footer p {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-  }
-  .sidebar {
-    display: flex;
-    position: fixed;
-    right: 30px;
-    bottom: 0;
-  }
-  .footer-links {
-    display: none;
-  }
-  footer p {
-    margin: 0;
   }
   .portfolio-content {
     flex-direction: row;
